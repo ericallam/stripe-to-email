@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    env: node
+    name: hello-world
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    autoDeploy: true
+    plan: starter
+    envVars:
+      - key: TRIGGER_API_KEY
+        sync: false
